@@ -27,11 +27,11 @@ CONFIG_SCHEMA = cv.All(
         {
             cv.GenerateID(): cv.declare_id(DARTComponent),
             cv.Optional(CONF_FORMALDEHYDE): sensor.sensor_schema(
-                UNIT_MICROGRAMS_PER_CUBIC_METER,
-                ICON_CHEMICAL_WEAPON,
-                0,
-                DEVICE_CLASS_EMPTY,
-                STATE_CLASS_MEASUREMENT,
+                unit_of_measurement=UNIT_MICROGRAMS_PER_CUBIC_METER,
+                icon=ICON_CHEMICAL_WEAPON,
+                accuracy_decimals=0,
+                device_class=DEVICE_CLASS_EMPTY,
+                state_class=STATE_CLASS_MEASUREMENT,
             ),
 		}
     )
