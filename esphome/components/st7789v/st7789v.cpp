@@ -134,11 +134,15 @@ void ST7789V::update() {
 void ST7789V::loop() {}
 
 void ST7789V::write_display_data() {
-  uint16_t x1 = 52;   // _offsetx
-  uint16_t x2 = 186;  // _offsetx
-  uint16_t y1 = 40;   // _offsety
-  uint16_t y2 = 279;  // _offsety
+  // uint16_t x1 = 52;   // _offsetx
+  // uint16_t x2 = 186;  // _offsetx
+  // uint16_t y1 = 40;   // _offsety
+  // uint16_t y2 = 279;  // _offsety
 
+  uint16_t x1 = 0;   // _offsetx
+  uint16_t x2 = 239;  // _offsetx
+  uint16_t y1 = 0;   // _offsety
+  uint16_t y2 = 321;  // _offsety
   this->enable();
 
   // set column(x) address
@@ -220,11 +224,13 @@ void ST7789V::write_color_(uint16_t color, uint16_t size) {
 }
 
 int ST7789V::get_height_internal() {
-  return 240;  // 320;
+  // return 240;  // 320;
+  return 320;  // 320;
 }
 
 int ST7789V::get_width_internal() {
-  return 135;  // 240;
+  // return 135;  // 240;
+  return 240;  // 240;
 }
 
 size_t ST7789V::get_buffer_length_() {
